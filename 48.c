@@ -10,6 +10,21 @@ int main(void)
 
 	printf("%s\n", userin);
 	printf("%s\n", userin);
+
+	printf("Number of words: %d\n", count(userin));
 }
 	
+int count(char *ptr)
+{
+	int c = 1;
+	int i = 0;
+	
+	while (ptr[i] != EOF)
+	{
+		if (ptr[i] == ' ')
+			c++;
+		i++;
+	}
+	return c;
+}
 	
